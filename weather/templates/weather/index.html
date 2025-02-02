@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>Weather App</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .weather-box { border: 1px solid #ddd; padding: 20px; width: 300px; margin: auto; }
+        .weather-icon { width: 100px; height: 100px; }
+    </style>
+    <link rel="icon" href="{% static 'weather/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'weather/style.css' %}">
+</head>
+<body>
+    <h1>Weather Forecast</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="city" placeholder="Enter city name" required>
+        <button type="submit">Get Weather</button>
+    </form>
+
+    {% if weather_data %}
+        {% if weather_data.error %}
+            <p style="color: red;">{{ weather_data.error }}</p>
+        {% else %}
+            <div class="weather-box">
+                <h2>{{ weather_data.city }}</h2>
+                <p>Temperature: {{ weather_data.temperature }}°C</p>
+                <p>Description: {{ weather_data.description }}</p>
+                <img class="weather-icon" src="http://openweathermap.org/img/w/{{ weather_data.icon }}.png" alt="Weather icon">
+            </div>
+        {% endif %}
+    {% endif %}
+</body>
+</html>

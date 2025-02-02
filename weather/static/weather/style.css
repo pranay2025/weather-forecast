@@ -1,0 +1,88 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #12ddb1;
+    color: #230606;
+}
+
+/* Center the content */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header Styles */
+h1 {
+    font-size: 2.5rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #150202;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Weather Box */
+.weather-box {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+}
+
+.weather-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+.weather-box p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    color: #555;
+}
+
+.weather-box img {
+    width: 80px;
+    height: 80px;
+    margin: 10px 0;
+}
+
+/* Error Message */
+.error {
+    color: red;
+    font-weight: bold;
+}
